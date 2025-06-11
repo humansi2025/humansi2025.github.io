@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object3DD Challenge 2025</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="images/logo_v2.png" alt="Object3DD Challenge Logo" class="logo">
+        </div>
+        <h1>Object3DD Challenge 2025</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#important-dates">Important Dates</a></li>
+            <li><a href="#overview">Overview</a></li>
+            <li><a href="#tracks">Challenge Tracks</a></li>
+            <li><a href="#prizes">Prizes</a></li>
+            <li><a href="#workshop">Workshop</a></li>
+            <li><a href="#organizers">Organizers</a></li>
+            <li><a href="#speakers">Speakers</a></li>
+            <li><a href="#impact">Impact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="important-dates" class="section">
+            <h2>Important Dates</h2>
+            <ul class="dates-list">
+                <li><strong>Submission Deadline:</strong> May 30, 2025, 24:00 (UTC+8)</li>
+                <li><strong>Results Notification:</strong> June 5, 2025</li>
+                <li><strong>Workshop Implementation:</strong> June 20, 2025</li>
+            </ul>
+        </section>
+
+        <section id="overview" class="section">
+            <h2>Challenge Overview</h2>
+            <p>Welcome to the 2025 Object3DD Challenge, a premier international competition focused on advancing traffic scene understanding through 3D object detection. This challenge is part of the 13th International Conference on Mobile Mapping Technology (MMT 2025) and aims to bring together researchers and practitioners to tackle fundamental challenges in object perception under autonomous driving scenarios.</p>
+            
+            <p>The significance of this research domain is multifaceted:</p>
+            <ol>
+                <li>Advancing autonomous vehicle perception systems through robust 3D object perception.</li>
+                <li>Enabling knowledge transfer across different mechanisms to enhance the generalizability of autonomous driving models under various mechanisms of LiDAR sensors.</li>
+                <li>Developing multimodal collaborative perception systems to improve the safety of autonomous driving.</li>
+            </ol>
+            
+            <p>With the continuous iteration of 3D sensors and the widespread adoption of intelligent vehicles, there is an urgent need to develop frameworks for cross-sensor LiDAR and multi-agent collaborative object perception. In this challenge, we welcome submissions of efficient domain adaptation methods and multimodal collaborative perception approaches. This workshop provides a structured platform for the dissemination of algorithmic innovations, methodological advances, and empirical findings in this rapidly evolving field. The challenge is open to students, teachers, and researchers in relevant fields.</p>
+        </section>
+
+        <section id="tracks" class="section">
+            <h2>Challenge Tracks</h2>
+            <p>The Traffic3D Challenge 2025 focuses on two critical domains:</p>
+
+            <div class="track">
+                <h3>Track 1: CMD Cross-Mechanism Domain Adaptation 3D Object Detection</h3>
+                <p><strong>Dataset: CMD: A Cross Mechanism Domain Adaptation Dataset for 3D Object Detection</strong></p>
+                <ul>
+                    <li><strong>Introduction:</strong> <a href="https://github.com/im-djh/CMD/blob/master/docs/competitiontrack.md" target="_blank">https://github.com/im-djh/CMD/blob/master/docs/competitiontrack.md</a></li>
+                    <li><strong>Challenge:</strong><a href="https://www.codabench.org/competitions/7749/" target="_blank">https://www.codabench.org/competitions/7749/</a></li>
+                    <li><strong>Data Description:</strong> The CMD dataset comprises three well-synchronised and precisely calibrated LiDAR mechanisms—128-beam mechanical, 32-beam mechanical, and solid/semi-solid-state—capturing 10 000 frames per sensor (50 sequences, 20 s each at 10 Hz). Data span a rich variety of environments, including urban, suburban, rural, highway, bridge, tunnel and campus settings, under five illumination conditions ranging from bright daylight to dusk.</li>
+                    <li><strong>Tasks:</strong> Participants must train detectors on point clouds from 128-beam or 32-beam mechanical LiDARs and, without any target-domain labels, generalise them to a hidden solid-state LiDAR test set for cross-mechanism domain adaptation 3D object detection.</li>
+                    <li><strong>Evaluation Metrics:</strong> Mean Average Precision (mAP) over four classes (Car, Truck, Pedestrian, Cyclist). Per-class APs reported as supplementary scores (IoU = 0.5 for Car/Truck, 0.25 for Ped/Cyc).</li>
+                </ul>
+            </div>
+
+            <div class="track">
+                <h3>Track 2: LiDAR-4D Radar Fusion for Cooperative 3D Object Detection</h3>
+                <p><strong>Dataset: V2X-R</strong></p>
+                <ul>
+                    <li><strong>Introduction:</strong> <a href="https://github.com/ylwhxht/V2X-R/tree/Challenge2025" target="_blank">https://github.com/ylwhxht/V2X-R/tree/Challenge2025</a></li>
+                    <li><strong>Challenge:</strong><a href="https://www.codabench.org/competitions/7754/" target="_blank">https://www.codabench.org/competitions/7754/</a></li>
+                    <li><strong>Data Description:</strong> The dataset covers a large number of simulated urban roads and contains a total of 12,079 V2X (Vehicle-to-Everything) scenarios, which are divided into 8,084 training frames, 829 validation frames, and 3,166 testing frames. Each scenario includes 37,727 frames of LiDAR point clouds and 4D millimeter-wave radar point clouds, as well as 170,859 annotated 3D vehicle bounding boxes. In each V2X scenario, the number of interconnected agents (connected vehicles and infrastructure) ranges from a minimum of 2 to a maximum of 5.</li>
+                    <li><strong>Tasks:</strong> Participants are required to train a 3D object detector using cooperative perception data from multimodal sources, including LiDAR point clouds and 4D radar point clouds. The detector should be capable of successfully identifying objects of interest in a cooperative perception scenario and outputting their 8-dimensional attributes, which include the length, width, height, 3D coordinates, orientation angle, and category of the objects.</li>
+                    <li><strong>Evaluation Metrics:</strong> The overall Average Precision (AP) with an Intersection over Union (IoU) threshold of 0.7 will be used as the main ranking metric, and AP at different distances (0-30m, 30-50m, 50m~Inf) will also be evaluated. The evaluation class is 'vehicle', the result is within the field of view (FOV) of the 'ego' vehicle camera and the range of x ∈ [0,140] m and y ∈ [-40,40]m. The broadcast range of the connected agent is 70 meters.</li>
+                </ul>
+            </div>
+
+        </section>
+
+        <section id="prizes" class="section">
+            <h2>Prizes</h2>
+            <p>We are thankful to our sponsor for providing the prizes. The prize award will be granted to the Top 3 individuals and teams on the leaderboard that provide valid submissions.</p>
+            <ul class="prizes-list">
+<!--                 <li><strong>1st Place:</strong> XXX CNY</li>
+                <li><strong>2nd Place:</strong> XXX CNY</li>
+                <li><strong>3rd Place:</strong> XXX CNY</li> -->
+            </ul>
+        </section>
+
+        <section id="workshop" class="section">
+            <h2>Workshop Format</h2>
+            <p>The workshop will implement a hybrid participation model, accommodating both in-person attendance and virtual engagement to maximize accessibility and international participation. The programmatic structure will comprise:</p>
+            <ul>
+                <li>Invited keynote presentations from recognized domain experts</li>
+                <li>Formal recognition ceremonies for competition winners</li>
+                <li>Technical presentations from winning teams detailing their methodological approaches</li>
+                <li>A structured panel discussion addressing emerging research directions</li>
+            </ul>
+
+            <h3>Schedule</h3>
+            <table class="schedule-table">
+                <tr>
+                    <th>Time</th>
+                    <th>Event</th>
+                </tr>
+                <tr>
+                    <td>14:00-14:05</td>
+                    <td>Welcome Introduction</td>
+                </tr>
+                <tr>
+                    <td>14:05-14:35</td>
+                    <td>Invited Talk (Talk 1)</td>
+                </tr>
+                <tr>
+                    <td>14:35-15:05</td>
+                    <td>Invited Talk (Talk 2)</td>
+                </tr>
+                <tr>
+                    <td>15:05-15:35</td>
+                    <td>Coffee break</td>
+                </tr>
+                <tr>
+                    <td>15:35-15:50</td>
+                    <td>Awarding Ceremony</td>
+                </tr>
+                <tr>
+                    <td>15:50-16:10</td>
+                    <td>Winner Talk (Track 1) + Q&A</td>
+                </tr>
+                <tr>
+                    <td>16:10-16:40</td>
+                    <td>Winner Talk (Track 2) + Q&A</td>
+                </tr>
+                <tr>
+                    <td>16:40-17:20</td>
+                    <td>Panel Discussion</td>
+                </tr>
+                <tr>
+                    <td>17:20-17:30</td>
+                    <td>Closing Remarks</td>
+                </tr>
+            </table>
+        </section>
+
+        <section id="organizers" class="section">
+            <h2>Organizing Committee</h2>
+            
+            <h3>Primary Organizer</h3>
+            <div class="organizer">
+                <p><strong>Chenglu Wen:</strong> Professor of the Department of Artificial Intelligence at Xiamen University. Her main research focuses on 3D vision, intelligent processing of point clouds, and multimodal fusion perception.</p>
+            </div>
+
+            <h3>Co-Organizers</h3>
+            <div class="organizer">
+                <p><strong>Qiming Xia:</strong> Ph.D. Student, ASC, Xiamen University. His research interests lie in the field of point cloud processing and intelligent transportation systems.</p>
+            </div>
+            <div class="organizer">
+                <p><strong>Xun Huang:</strong> Ph.D. Student, ASC, Xiamen University and Beijing Zhongguancun Institute. His research interests lie in the field of point cloud processing and intelligent transportation systems.</p>
+            </div>
+            <div class="organizer">
+                <p><strong>Wei Ye:</strong> M.S. Student, ASC, Xiamen University. His research interests include 3D computer vision and their applications in intelligent transportation systems.</p>
+            </div>
+            <div class="organizer">
+                <p><strong>Huanjia Zhang:</strong> M.S. Student, ASC, Xiamen University. His research interests include 3D computer vision and their applications in intelligent transportation systems.</p>
+            </div> 
+            <div class="organizer">
+                <p><strong>Shijia Zhao:</strong> Ph.D. Student, ASC, Xiamen University. His research interests include 3D computer vision and their applications in intelligent transportation systems.</p>
+            </div> 
+<!--             <div class="organizer">
+                <p><strong>Hai Wu:</strong> Assistant Researcher, Pengcheng Lab. His research interests include 3D computer vision and their applications in intelligent transportation systems.</p>
+            </div> 
+            <div class="organizer">
+                <p><strong>Jinghao Deng:</strong> Algorithm Engineer, Xiaopeng. His research interests include 3D computer vision and their applications in intelligent transportation systems.</p>
+            </div>  -->
+        </section>
+
+        <section id="speakers" class="section">
+            <h2>Confirmed Speakers</h2>
+            <div class="speaker">
+                <p><strong>Hai Wu:</strong> Assistant Researcher, Pengcheng Lab. Topic: Research on High-Precision 3D Object Detection Algorithms.
+ </p>
+            </div>
+        </section>
+
+        <section id="impact" class="section">
+            <h2>Broader Impact</h2>
+            <p>The intellectual contributions and methodological frameworks developed through this challenge have the potential to catalyze significant technological and societal advancements across multiple domains:</p>
+            <ul>
+                <li>Enhanced Autonomous Driving Safety and Efficiency. Improving the accuracy and robustness of 3D object detection in autonomous vehicles enhances safety by enabling better perception in diverse environments. These technologies also optimize traffic flow management through more precise traffic information, reducing congestion and improving overall transportation efficiency.</li>
+                <li>Improved Infrastructure Management and Environmental Sustainability. Accurate detection of infrastructure damage facilitates more efficient maintenance scheduling, reducing the risk of accidents caused by deteriorating infrastructure. Additionally, optimized traffic flow management lowers energy consumption and carbon emissions, supporting environmental sustainability.</li>
+                <li>Advancements in Multimodal Data Fusion and System Integration. Providing New Frameworks for Data Integration. New frameworks for aligning and integrating data from multiple sensors enhance the capabilities of intelligent transportation systems. These advancements support the development of more comprehensive and reliable traffic monitoring and management solutions.</li>
+            </ul>
+
+            <h3>Ethical Considerations</h3>
+            <p>The datasets utilized in this challenge have been collected and annotated in strict accordance with applicable privacy legislation and regulatory frameworks. All personally identifiable information has been methodically anonymized to ensure the protection of individual privacy rights and community interests. The organizing committee will implement rigorous protocols to ensure that the dataset utilization remains exclusively within the intended research domain of point cloud-based traffic scene understanding.</p>
+            
+            <p>For more information, please contact the organizing committee at xiaqiming@stu.xmu.edu.cn</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Object3DDD Challenge. All rights reserved.</p>
+    </footer>
+</body>
+</html>
