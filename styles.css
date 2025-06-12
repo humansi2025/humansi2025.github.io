@@ -17,7 +17,7 @@ header {
     /* background-color: #1a5276;
     color: white; */
     background-color: white;
-    color: #5274B1;
+    color: #446fbf;
     text-align: center;
     padding: 1rem 0;
 }
@@ -39,7 +39,7 @@ header h1 {
 /* Navigation */
 nav {
     /* background-color: #2874a6; */
-    background-color: #8EA4CC;
+    background-color: #5274B1;
     position: sticky;
     top: 0;
     z-index: 100;
@@ -88,7 +88,7 @@ nav a:hover::after {
 main {
     max-width: 1200px;
     margin: 2rem auto;
-    padding: 0 1rem;
+    padding: 0 1rem; 
 }
 
 .section {
