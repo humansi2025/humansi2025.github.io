@@ -14,8 +14,10 @@ body {
 
 /* Header */
 header {
-    background-color: #1a5276;
-    color: white;
+    /* background-color: #1a5276;
+    color: white; */
+    background-color: white;
+    color: #5274B1;
     text-align: center;
     padding: 1rem 0;
 }
@@ -89,7 +91,8 @@ main {
 }
 
 .section {
-    background-color: white;
+    /* background-color: white; */
+    background-color: #5274B1;
     margin-bottom: 2rem;
     padding: 2rem;
     border-radius: 5px;
