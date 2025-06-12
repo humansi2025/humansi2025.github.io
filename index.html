@@ -21,10 +21,10 @@
             <li><a href="#overview">Overview</a></li>
             <li><a href="#tracks">Challenge Tracks</a></li>
             <li><a href="#prizes">Prizes</a></li>
-            <li><a href="#workshop">Workshop</a></li>
+            <!-- <li><a href="#workshop">Workshop</a></li> -->
             <li><a href="#organizers">Organizers</a></li>
-            <li><a href="#speakers">Speakers</a></li>
-            <li><a href="#impact">Impact</a></li>
+            <!-- <li><a href="#speakers">Speakers</a></li>
+            <li><a href="#impact">Impact</a></li> -->
         </ul>
     </nav>
 
@@ -41,7 +41,7 @@
 
         <section id="overview" class="section">
             <h2>Challenge Overview</h2>
-            <p>Welcome to the 2025 Object3DD Challenge, a premier international competition focused on advancing traffic scene understanding through 3D object detection. This challenge is part of the 13th International Conference on Mobile Mapping Technology (MMT 2025) and aims to bring together researchers and practitioners to tackle fundamental challenges in object perception under autonomous driving scenarios.</p>
+            <!-- <p>Welcome to the 2025 Object3DD Challenge, a premier international competition focused on advancing traffic scene understanding through 3D object detection. This challenge is part of the 13th International Conference on Mobile Mapping Technology (MMT 2025) and aims to bring together researchers and practitioners to tackle fundamental challenges in object perception under autonomous driving scenarios.</p>
             
             <p>The significance of this research domain is multifaceted:</p>
             <ol>
@@ -50,35 +50,47 @@
                 <li>Developing multimodal collaborative perception systems to improve the safety of autonomous driving.</li>
             </ol>
             
-            <p>With the continuous iteration of 3D sensors and the widespread adoption of intelligent vehicles, there is an urgent need to develop frameworks for cross-sensor LiDAR and multi-agent collaborative object perception. In this challenge, we welcome submissions of efficient domain adaptation methods and multimodal collaborative perception approaches. This workshop provides a structured platform for the dissemination of algorithmic innovations, methodological advances, and empirical findings in this rapidly evolving field. The challenge is open to students, teachers, and researchers in relevant fields.</p>
+            <p>With the continuous iteration of 3D sensors and the widespread adoption of intelligent vehicles, there is an urgent need to develop frameworks for cross-sensor LiDAR and multi-agent collaborative object perception. In this challenge, we welcome submissions of efficient domain adaptation methods and multimodal collaborative perception approaches. This workshop provides a structured platform for the dissemination of algorithmic innovations, methodological advances, and empirical findings in this rapidly evolving field. The challenge is open to students, teachers, and researchers in relevant fields.</p> -->
+            <p>In the era of deep integration of artificial intelligence and 3D perception technologies, multimodal human pose estimation (HPE), as a key technology bridging the physical and digital worlds, is becoming a core enabler in cutting-edge fields such as embodied intelligent interaction, metaverse construction, motion analysis, and autonomous systems. Current HPE methods and datasets primarily remain at the level of monocular cameras, while 3D vision technology is not only iterating on single sensors but also requires innovation and breakthroughs in multi-sensor fusion technologies. To bring together top global research efforts and explore the boundaries of high-precision multimodal 3D human pose estimation and global trajectory tracking in complex dynamic environments, we are hosting the HumanSI (Human Spatial Intelligence) Multimodal Human Pose Estimation Challenge.</p>
+            <p>This challenge is based on the RELI11D dataset and the LEIR method published at the 2024 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR). It aims to inspire participants to develop and optimize algorithms for high-precision 3D human pose estimation using multimodal data (RGB, LiDAR, IMU motion capture sensors, and event cameras). The competition provides a platform for participating teams to test their technical prowess in interdisciplinary fields such as computer vision, deep learning, and multimodal fusion, while driving significant advancements in real-time motion capture, high-fidelity digital twins, and automated scene understanding.</p>
+            <p>If you are interested in this challenge, please register via the QR code or link below. For any questions during the registration process, please contact the challenge organizer.</p>
         </section>
 
         <section id="tracks" class="section">
-            <h2>Challenge Tracks</h2>
-            <p>The Traffic3D Challenge 2025 focuses on two critical domains:</p>
+            <h2>Challenge Task</h2>
 
             <div class="track">
-                <h3>Track 1: CMD Cross-Mechanism Domain Adaptation 3D Object Detection</h3>
-                <p><strong>Dataset: CMD: A Cross Mechanism Domain Adaptation Dataset for 3D Object Detection</strong></p>
+                <h3>Submission Specifications and Evaluation Criteria</h3>
+                <p><strong>Recommended Hardware</strong></p>
                 <ul>
-                    <li><strong>Introduction:</strong> <a href="https://github.com/im-djh/CMD/blob/master/docs/competitiontrack.md" target="_blank">https://github.com/im-djh/CMD/blob/master/docs/competitiontrack.md</a></li>
-                    <li><strong>Challenge:</strong><a href="https://www.codabench.org/competitions/7749/" target="_blank">https://www.codabench.org/competitions/7749/</a></li>
-                    <li><strong>Data Description:</strong> The CMD dataset comprises three well-synchronised and precisely calibrated LiDAR mechanisms—128-beam mechanical, 32-beam mechanical, and solid/semi-solid-state—capturing 10 000 frames per sensor (50 sequences, 20 s each at 10 Hz). Data span a rich variety of environments, including urban, suburban, rural, highway, bridge, tunnel and campus settings, under five illumination conditions ranging from bright daylight to dusk.</li>
-                    <li><strong>Tasks:</strong> Participants must train detectors on point clouds from 128-beam or 32-beam mechanical LiDARs and, without any target-domain labels, generalise them to a hidden solid-state LiDAR test set for cross-mechanism domain adaptation 3D object detection.</li>
-                    <li><strong>Evaluation Metrics:</strong> Mean Average Precision (mAP) over four classes (Car, Truck, Pedestrian, Cyclist). Per-class APs reported as supplementary scores (IoU = 0.5 for Car/Truck, 0.25 for Ped/Cyc).</li>
+                    <li><strong>CPU:</strong> Intel Xeon Gold 6248</li>
+                    <li><strong>GPU:</strong> NVIDIA RTX 4090</li>
+                    <li><strong>RAM:</strong> 128GB DDR4</li>
                 </ul>
-            </div>
 
-            <div class="track">
-                <h3>Track 2: LiDAR-4D Radar Fusion for Cooperative 3D Object Detection</h3>
-                <p><strong>Dataset: V2X-R</strong></p>
+                <p><strong>Core Evaluation Dimensions (Threshold Conditions)</strong></p>
                 <ul>
-                    <li><strong>Introduction:</strong> <a href="https://github.com/ylwhxht/V2X-R/tree/Challenge2025" target="_blank">https://github.com/ylwhxht/V2X-R/tree/Challenge2025</a></li>
-                    <li><strong>Challenge:</strong><a href="https://www.codabench.org/competitions/7754/" target="_blank">https://www.codabench.org/competitions/7754/</a></li>
-                    <li><strong>Data Description:</strong> The dataset covers a large number of simulated urban roads and contains a total of 12,079 V2X (Vehicle-to-Everything) scenarios, which are divided into 8,084 training frames, 829 validation frames, and 3,166 testing frames. Each scenario includes 37,727 frames of LiDAR point clouds and 4D millimeter-wave radar point clouds, as well as 170,859 annotated 3D vehicle bounding boxes. In each V2X scenario, the number of interconnected agents (connected vehicles and infrastructure) ranges from a minimum of 2 to a maximum of 5.</li>
-                    <li><strong>Tasks:</strong> Participants are required to train a 3D object detector using cooperative perception data from multimodal sources, including LiDAR point clouds and 4D radar point clouds. The detector should be capable of successfully identifying objects of interest in a cooperative perception scenario and outputting their 8-dimensional attributes, which include the length, width, height, 3D coordinates, orientation angle, and category of the objects.</li>
-                    <li><strong>Evaluation Metrics:</strong> The overall Average Precision (AP) with an Intersection over Union (IoU) threshold of 0.7 will be used as the main ranking metric, and AP at different distances (0-30m, 30-50m, 50m~Inf) will also be evaluated. The evaluation class is 'vehicle', the result is within the field of view (FOV) of the 'ego' vehicle camera and the range of x ∈ [0,140] m and y ∈ [-40,40]m. The broadcast range of the connected agent is 70 meters.</li>
+                    <p><strong>Overall Requirement:</strong></p>
+                    <li><strong>MPJPE ≤ 100 mm, PA-MPJPE ≤ 90 mm</strong></li>
                 </ul>
+
+                <p><strong>Specialized Pose Estimation Metrics (Based on RELI11D Paper)</strong></p>
+                <ul>
+                    <li><strong>ACCEL:</strong> Measures the accuracy of human motion acceleration prediction (unit: m/s², ↓). This metric evaluates the algorithm's performance in capturing dynamic movements (e.g., rapid acceleration changes), particularly suitable for fast and complex motion scenarios such as table tennis or taekwondo.</li>
+                    <li><strong>MPJPE (Mean Per-Joint Position Error):</strong> The average Euclidean distance between predicted 3D joint positions and ground truth (unit: mm, ↓). This metric directly assesses pose estimation accuracy.</li>
+                    <li><strong>PA-MPJPE (Procrustes-Aligned MPJPE):</strong> MPJPE after global rotation and translation alignment (unit: mm, ↓). This metric eliminates the influence of global transformations, focusing on local joint pose accuracy.</li>
+                    <li><strong>PVE (Position and Velocity Error):</strong> A comprehensive evaluation of 3D joint position and motion velocity prediction errors (unit: mm, ↓). This metric is particularly useful for assessing the smoothness and consistency of global trajectories.</li>
+                    <li><strong>PCK0.3 (Percentage of Correct Keypoints within 0.3m):</strong> The proportion of correctly predicted joints within a 0.3-meter threshold (↑ higher is better). This metric evaluates algorithm robustness under larger error tolerances, suitable for pose estimation in complex scenarios.</li>
+                </ul>
+
+                <p><strong>Additional Resources</strong></p>
+                <ul>
+                    <li><strong>RELI11D Project Page:</strong><a href="http://www.lidarhumanmotion.net/reli11d/" target="_blank"> http://www.lidarhumanmotion.net/reli11d/</a></li>
+                    <li><strong>RELI11D & LEIR Algorithm Page:</strong><a href="https://github.com/yanmn/RELI11DandLIER" target="_blank"> https://github.com/yanmn/RELI11DandLIER</a></li>
+                    <li><strong>RELI11D Dataset Tips:</strong><a href="http://www.lidarhumanmotion.net/data-reli11d/" target="_blank">  http://www.lidarhumanmotion.net/data-reli11d/</a></li>
+                    <li><strong>RELI11D Paper:</strong><a href="https://openaccess.thecvf.com/content/CVPR2024/papers/Yan_RELI11D_A_Comprehensive_Multimodal_Human_Motion_Dataset_and_Method_CVPR_2024_paper.pdf" target="_blank"> https://openaccess.thecvf.com/content/CVPR2024/papers/Yan_RELI11D_A_Comprehensive_Multimodal_Human_Motion_Dataset_and_Method_CVPR_2024_paper.pdf</a></li>
+                </ul>
+                
             </div>
 
         </section>
@@ -93,7 +105,7 @@
             </ul>
         </section>
 
-        <section id="workshop" class="section">
+        <!-- <section id="workshop" class="section">
             <h2>Workshop Format</h2>
             <p>The workshop will implement a hybrid participation model, accommodating both in-person attendance and virtual engagement to maximize accessibility and international participation. The programmatic structure will comprise:</p>
             <ul>
@@ -146,31 +158,31 @@
                     <td>Closing Remarks</td>
                 </tr>
             </table>
-        </section>
+        </section> -->
 
         <section id="organizers" class="section">
             <h2>Organizing Committee</h2>
             
             <h3>Primary Organizer</h3>
             <div class="organizer">
-                <p><strong>Chenglu Wen:</strong> Professor of the Department of Artificial Intelligence at Xiamen University. Her main research focuses on 3D vision, intelligent processing of point clouds, and multimodal fusion perception.</p>
+                <p><strong>Siqi Shen:</strong> Associate Professor and doctoral supervisor in the Department of Computer Science, School of Information Science and Engineering, Xiamen University. he is mainly engaged in research in the fields of multi-agent perception and computing (multi-agent reinforcement learning, human motion and scene capture and generation, large models, AI Agents, visual positioning, embodied intelligence, etc.).</p>
             </div>
 
             <h3>Co-Organizers</h3>
             <div class="organizer">
-                <p><strong>Qiming Xia:</strong> Ph.D. Student, ASC, Xiamen University. His research interests lie in the field of point cloud processing and intelligent transportation systems.</p>
+                <p><strong>Ming Yan:</strong> Ph.D. Student, ASC, Xiamen University. His research interests lie in sports-based complex human motion recovery.</p>
             </div>
             <div class="organizer">
-                <p><strong>Xun Huang:</strong> Ph.D. Student, ASC, Xiamen University and Beijing Zhongguancun Institute. His research interests lie in the field of point cloud processing and intelligent transportation systems.</p>
+                <p><strong>Yuhua Luo:</strong> Ph.D. Student, ASC, Xiamen University. His research focuses on 3D human pose estimation and computer vision.</p>
             </div>
             <div class="organizer">
-                <p><strong>Wei Ye:</strong> M.S. Student, ASC, Xiamen University. His research interests include 3D computer vision and their applications in intelligent transportation systems.</p>
+                <p><strong>Mengyin Liu:</strong> M.S. Student, ASC, Xiamen University. Her research interests include 3D computer vision and human pose estimation.</p>
             </div>
             <div class="organizer">
-                <p><strong>Huanjia Zhang:</strong> M.S. Student, ASC, Xiamen University. His research interests include 3D computer vision and their applications in intelligent transportation systems.</p>
+                <p><strong>Shuqi Fan:</strong> M.S. Student, ASC, Xiamen University. Her research interests include 3D computer vision and human pose estimation.</p>
             </div> 
             <div class="organizer">
-                <p><strong>Shijia Zhao:</strong> Ph.D. Student, ASC, Xiamen University. His research interests include 3D computer vision and their applications in intelligent transportation systems.</p>
+                <p><strong>Zekai Wu:</strong> M.S. Student, ASC, Xiamen University. His research interests center on leveraging event cameras for human pose estimation within the domain of 3D computer vision.</p>
             </div> 
 <!--             <div class="organizer">
                 <p><strong>Hai Wu:</strong> Assistant Researcher, Pengcheng Lab. His research interests include 3D computer vision and their applications in intelligent transportation systems.</p>
@@ -180,15 +192,15 @@
             </div>  -->
         </section>
 
-        <section id="speakers" class="section">
+        <!-- <section id="speakers" class="section">
             <h2>Confirmed Speakers</h2>
             <div class="speaker">
                 <p><strong>Hai Wu:</strong> Assistant Researcher, Pengcheng Lab. Topic: Research on High-Precision 3D Object Detection Algorithms.
  </p>
             </div>
-        </section>
+        </section> -->
 
-        <section id="impact" class="section">
+        <!-- <section id="impact" class="section">
             <h2>Broader Impact</h2>
             <p>The intellectual contributions and methodological frameworks developed through this challenge have the potential to catalyze significant technological and societal advancements across multiple domains:</p>
             <ul>
@@ -201,7 +213,7 @@
             <p>The datasets utilized in this challenge have been collected and annotated in strict accordance with applicable privacy legislation and regulatory frameworks. All personally identifiable information has been methodically anonymized to ensure the protection of individual privacy rights and community interests. The organizing committee will implement rigorous protocols to ensure that the dataset utilization remains exclusively within the intended research domain of point cloud-based traffic scene understanding.</p>
             
             <p>For more information, please contact the organizing committee at xiaqiming@stu.xmu.edu.cn</p>
-        </section>
+        </section> -->
     </main>
 
     <footer>
