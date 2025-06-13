@@ -93,7 +93,7 @@ main {
 
 .section {
     /* background-color: white; */
-    background-color: #b3c8f1;
+    background-color: #d3e3fd;
     margin-bottom: 2rem;
     padding: 2rem;
     border-radius: 5px;
@@ -101,7 +101,7 @@ main {
 }
 
 h2 {
-    color: white;
+    color: #2367d4;
     margin-bottom: 1.5rem;
     padding-bottom: 0.5rem;
     border-bottom: 2px solid #2874a6;
