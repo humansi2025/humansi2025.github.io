@@ -86,6 +86,70 @@
                     <li><strong>PCK0.3 (Percentage of Correct Keypoints within 0.3m):</strong> The proportion of correctly predicted joints within a 0.3-meter threshold (↑ higher is better). This metric evaluates algorithm robustness under larger error tolerances, suitable for pose estimation in complex scenarios.</li>
                 </ul>
 
+                <h3><strong>RELI11D Dataset Benchmark & Submission & Presentation</strong></h3>
+                <ul>
+                    <p><strong>RELI11D Dataset Benchmark:</strong></p>
+                    <p><strong>Input:</strong> 
+
+                    Unspecified number of: nspecified number of: 
+
+                    - RGB sequences
+                    
+                    - LiDAR point clouds
+                    
+                    - IMU measurements
+                    
+                    - Event camera streams
+
+                    (Participants may freely choose the input modalities they wish to use. The organizers recommend using RGB + LiDAR + Event modalities.)</p>
+                    
+                    <p><strong>Output Requirements:</strong> 
+
+                    3D joint positions, SMPL parameters (θ, β, T), Global trajectory (optional)
+
+                    (Output format should follow the RELI11D dataset standard.)</p>
+    
+                    <p><strong>Optional Scene Data:</strong> 
+
+                    The dataset includes the following high-precision scene data for physics-based human pose estimation:
+
+                    - Lidar-scanned 3D environments
+                        
+                    - High-density mesh scenes
+                        
+                    - Sparse rotating radar scenes</p>
+                </ul>
+
+                <ul>
+                    <p><strong>Submission:</strong></p>
+                    <p><strong>Required Output:</strong> 
+
+                    Participants must process the <strong>test_upload</strong> folder (no ground truth provided) and generate:
+
+                    - 3D joint positions
+                    
+                    - SMPL parameters (θ, β, T)
+                    
+                    - Global trajectory (optional)
+                    
+                    Format: Strictly follow the RELI11D dataset specifications.</p>
+
+                    <p><strong>Code Submission:</strong> 
+                    
+                    Runnable scripts / executable programs / source code (must be functional).</p>
+                    
+                    <p><strong>Technical Report (≤5 pages):</strong> 
+                    
+                    - Method overview
+                    
+                    - Key innovations
+                    
+                    - Algorithm runtime & resource usage (memory/GPU consumption)</p>
+
+                    <p><strong>Email all materials to the technical support email (address to be specified).</strong></p>
+
+                </ul>
+
                 <h3><strong>Additional Resources</strong></h3>
                 <ul>
                     <li><strong>RELI11D Project Page:</strong><a href="http://www.lidarhumanmotion.net/reli11d/" target="_blank"> http://www.lidarhumanmotion.net/reli11d/</a></li>
@@ -164,6 +228,7 @@
                     <td>Closing Remarks</td>
                 </tr>
             </table>
+            
         </section> -->
 
         <section id="organizers" class="section">
