@@ -82,7 +82,7 @@
                     <li><strong>ACCEL:</strong> Measures the accuracy of human motion acceleration prediction (unit: m/s², ↓). This metric evaluates the algorithm's performance in capturing dynamic movements (e.g., rapid acceleration changes), particularly suitable for fast and complex motion scenarios such as table tennis or taekwondo.</li>
                     <li><strong>MPJPE (Mean Per-Joint Position Error):</strong> The average Euclidean distance between predicted 3D joint positions and ground truth (unit: mm, ↓). This metric directly assesses pose estimation accuracy.</li>
                     <li><strong>PA-MPJPE (Procrustes-Aligned MPJPE):</strong> MPJPE after global rotation and translation alignment (unit: mm, ↓). This metric eliminates the influence of global transformations, focusing on local joint pose accuracy.</li>
-                    <li><strong>PVE (Position and Velocity Error):</strong> A comprehensive evaluation of 3D joint position and motion velocity prediction errors (unit: mm, ↓). This metric is particularly useful for assessing the smoothness and consistency of global trajectories.</li>
+                    <li><strong>PVE (Per Vertex Error):</strong> PVE does the same alignment as MPJPE and then calculates the distances of vertices of human mesh, evaluating also the mesh shape additionally to the 3D skeleton pose.</li>
                     <li><strong>PCK0.3 (Percentage of Correct Keypoints within 0.3m):</strong> The proportion of correctly predicted joints within a 0.3-meter threshold (↑ higher is better). This metric evaluates algorithm robustness under larger error tolerances, suitable for pose estimation in complex scenarios.</li>
                 </ul>
 
